@@ -86,6 +86,7 @@ local function YieldForChild(inst, name)
 	
 	return coroutine.yield()
 end
+------
 
 local ugc = hCloneref(game)
 local rng = Random.new(os.clock())
@@ -100,8 +101,8 @@ local TaskHubScriptIdentity = {
 		["Enfosi-game"] = 141
 	},
 	ScriptPlaceIdentity = {
-		["Lobby"] = 78353262320982,
-		["Enfosi-game"] = 99811418619120
+		["Lobby"] = 78353262320982, --// @Lobby
+		["Enfosi-game"] = 99811418619120 --// @RealGame
 	},
 	
 	BaseNotificationIcon = "rbxassetid://7138511050",
@@ -109,19 +110,18 @@ local TaskHubScriptIdentity = {
 	
 	Librarys = {
 		Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-taskkill/Librarys/refs/heads/main/scr/Notification.luau", true))(),
-		PlaceSignature = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-taskkill/Librarys/refs/heads/main/scr/PlaceSignature.luau", true))(),
-		GCBypass = loadstring(game:HttpGet("https://raw.githubusercontent.com/secretisadev/Babyhamsta_Backup/refs/heads/main/Universal/Bypasses.lua", true))()
+		PlaceSignature = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-taskkill/Librarys/refs/heads/main/scr/PlaceSignature.luau", true))()
 	},
 	
 	Connections = {},
 	
-	DynamicChamConfiguration = {
+	DynamicChamConfiguration = { --// not necessary but will be here
 		TransitionInfo = TweenInfo.new(1.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In) 
 	},
 	
 	PlaceId = ugc.PlaceId,
 	PlaceVersion = ugc.PlaceVersion,
-	MaxDisplayOrder = 2147483647
+	MaxDisplayOrder = 2147483647 --// no comments
 }
 
 local Players = hCloneref(ugc:GetService("Players"))
